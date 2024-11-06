@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+</head>
+<body>
+
+    <h3 align="center">Решение алгоритмической задачи</h3>
+    <p id="task_content">Определить, выполняются ли неравенства A &lt; B &lt; C или A &lt; B &gt; C и какое именно неравенство выполняется.</p>
+    <p>Значение A: <span id="a">90</span></p>
+    <p>Значение B: <span id="b">30</span></p>
+    <p>Значение C: <span id="c">100</span></p>
+    <button id="verify">Проверить неравенства</button>
+
+    <p>Результат: <span id="result"></span></p>
+
+</body>
+<script>    
+function verify() {
+    let a = parseFloat(document.getElementById("a").innerText);
+    let b = parseFloat(document.getElementById("b").innerText);
+    let c = parseFloat(document.getElementById("c").innerText);
+
+    let result = "";
+
+    if (a < b && b < c) {
+        result = "Выполняется неравенство A < B < C";
+    } else if (a < b && b > c) {
+        result = "Выполняется неравенство A < B > C";
+    } else {
+        result = "Ни одно из неравенств не выполняется";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+
+const elementVerify = document.getElementById("verify");
+elementVerify.addEventListener('click', verify);
+</script>
+</html>

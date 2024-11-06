@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форматирование</title>
+</head>
+<body>
+<h1 align="center">ПАСПОРТ</h1>
+<b>Паспорт выдан:</b>   <p>ГУ МВД РОССИИ ПО ГОРОДУ КУРСК  </p>
+<b>Дата выдачи:</b>
+<p>15.10.2020</p>
+<b>Код подразделения:</b>
+<p>123-340</p>
+<b>Серия и номер:</b>
+<p>4567 345673</p>
+<b>Фамилия:</b>
+ <p> <span id="new">Гохвайс</span> </p>
+ <i id="for_click">Перевести фамилию на латиницу </i> 
+<p></p><b>Имя:</b>
+<p><span id="new1">Владислав</span></p>
+<i id="for_click1">Перевести имя на латиницу </i> 
+<p></p><b>Отчество:</b>
+<p>Вячеславович</p>
+<b>Пол:</b>
+<p>Мужской</p>
+<b>Дата рождения:</b>
+<p>14.10.2003</p>
+<b>Место рождения:</b>
+<p><span id="new2">Гор. Варшава </span></p>
+<i id="for_click2">Перевести название города на латиницу </i> 
+<p></p>
+</body>
+<script> 
+function ru (){
+const item = document.getElementById ('new')
+console.log (item.innerText)
+item.innerHTML = "<p> Gohvais </p>"
+}
+const node_for_click = document.getElementById ("for_click")
+node_for_click.addEventListener ("click", ru)
+
+function emily () {
+const item = document.getElementById ('new1')
+console.log (item.innerText)
+item.innerHTML = "<p> Vladislav </p>"
+}
+const node_for_click1 = document.getElementById ("for_click1")
+node_for_click1.addEventListener ("click", emily)
+
+function ivan () {
+const item = document.getElementById ('new2')
+console.log (item.innerText)
+item.innerHTML = "<p> City Warsaw </p>"
+}
+const node_for_click2 = document.getElementById ("for_click2")
+node_for_click2.addEventListener ("click", ivan)
+
+
+
+
+</script>
+
+
+</html>
+
+
+
+
+
+
+
